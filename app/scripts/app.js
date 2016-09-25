@@ -17,6 +17,8 @@
       })
   })
 
-
-
+/*Manually Bootstrap Angular application*/
+angular.element(document).ready(function() {
+      angular.bootstrap(document, ['angularMApp']);
+});
 
