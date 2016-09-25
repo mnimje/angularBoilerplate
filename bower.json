@@ -1,0 +1,40 @@
+{
+  "name": "mNimjeApp",
+  "description": "Mayank Nimje personal portfolio application",
+  "main": "app/scripts/app.js",
+  "authors": [
+    "Mayank Nimje"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Mayank",
+    "Nimje",
+    "Portfolio",
+    "Angular",
+    "Developer",
+    "HTML",
+    "5",
+    "Developer",
+    "CSS",
+    "3",
+    "Developer",
+    "NodeJS",
+    "Developer",
+    "Front",
+    "End",
+    "Developer"
+  ],
+  "homepage": "index.html",
+  "dependencies": {
+    "angular-cookies": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-scenario": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular": "^1.5.8",
+    "es5-shim": "^4.5.9",
+    "json3": "^3.3.2",
+    "bootstrap": "^3.3.7"
+  }
+}
