@@ -1,31 +1,38 @@
-$(document).ready(function(){
-    var aboutMe = $("#about").position();
-    var mySkills = $("#mySkills").position();
-    var myExp = $("#myExperience").position();
-    var myEducation = $("#myEducation").position();
-    var myPortfolio = $("#myPortfolio").position();
-    var myContact = $("#myContact").position();
-    var myFeedback = $("#myFeedback").position();
+$$(document).ready(function(){           
+    var _myApp = {
+        init:function(){
+            var aboutMe = $$("#about").position();
+            var mySkills = $$("#mySkills").position();
+            var myExperience = $$("#myExperience").position();
+            var myEducation = $$("#myEducation").position();
+            var myPortfolio = $$("#myPortfolio").position();
+            var myContact = $$("#myContact").position();
+            var myFeedback = $$("#myFeedback").position();                    
+            _myApp.bindEvent();
+        },
+        bindEvent:function(){            
+            $$(".caption").css("width","30% !important");
+        }
+    };
     
-    $(".caption").css("width","30%");
- 
-    
-	$(".headerNavBar").on("mouseover",function(){
-	   $(".headerNavBar").css("margin-left","0px");
+    _myApp.init(); 
+
+	$$(".headerNavBar").on("mouseover",function(){
+	   $$(".headerNavBar").css("margin-left","0px");
     }).on("mouseout",function(){
-	   $(".headerNavBar").css("margin-left","-65px");
+	   $$(".headerNavBar").css("margin-left","-65px");
     });
     
-    $(document).scroll(function() {
-      var y = $(this).scrollTop();
+    $$(document).scroll(function() {
+      var y = $$(this).scrollTop();
         
       if (y > 220) {
-        $(".headerNavBar").css({"margin-left":"-65px","background":"#DC3248"});
-        $(".headerNavBar a").css('color','white !important');        
+        $$(".headerNavBar").css({"margin-left":"-65px","background":"#DC3248"});
+        $$(".headerNavBar a").css('color','white !important');        
       }
         else {
-        $(".headerNavBar").css({"margin-left":"0px","background":"white"});	
-        $(".headerNavBar a").css('color','black !important');
+        $$(".headerNavBar").css({"margin-left":"0px","background":"white"});	
+        $$(".headerNavBar a").css('color','black !important');
       }
         
         if(y > (aboutMe.top -10 )){
@@ -50,12 +57,12 @@ $(document).ready(function(){
         if( y >= 0 && mySkills.top > y ){    
             //console.log("about me");
             drawCaption(y,aboutMe.top,"About Me","","about","","about");  
-        }else if(y > (mySkills.top - 10) && myExp.top > y){
+        }else if(y > (mySkills.top - 10) && myExperience.top > y){
             //console.log("my Skills");        
             drawCaption(y,mySkills.top,"My Skills","About Me","mySkills","about","about");
-        }else if(y > (myExp.top - 10) && myEducation.top > y){
+        }else if(y > (myExperience.top - 10) && myEducation.top > y){
             //console.log("my Experience");        
-            drawCaption(y,myExp.top,"My Experience","My Skills","myExperience","mySkills","about");
+            drawCaption(y,myExperience.top,"My Experience","My Skills","myExperience","mySkills","about");
         }else if(y > (myEducation.top - 10) && myPortfolio.top > y){
             //console.log("my Edu");        
             drawCaption(y,myEducation.top,"My Education","My Experience","myEducation","myExperience","about");
@@ -84,14 +91,14 @@ $(document).ready(function(){
 
 function drawCaption(scrollPos,contentPos,textToShow,textToChange,classToAdd,classToRemove,id){
     /*if(contentPos < scrollPos){
-        $("#"+id).addClass("fixed");
-        $("#"+id).addClass(classToAdd).removeClass(classToRemove);
-        $("#"+id).find(".innerText").text(textToShow);
+        $$("#"+id).addClass("fixed");
+        $$("#"+id).addClass(classToAdd).removeClass(classToRemove);
+        $$("#"+id).find(".innerText").text(textToShow);
     }else{
-        $("#"+id).removeClass(classToRemove).addClass(classToAdd);
-        $("#"+id).find(".innerText").text(textToChange);
+        $$("#"+id).removeClass(classToRemove).addClass(classToAdd);
+        $$("#"+id).find(".innerText").text(textToChange);
     }*/
-    $("#"+id).removeClass("about mySkills myExperience myPortfolio myEducation myContact myFeedback");
-    $("#"+id).addClass(classToAdd).removeClass(classToRemove);
-    $("#"+id).find(".innerText").text(textToShow);
+    $$("#"+id).removeClass("about mySkills myExperience myPortfolio myEducation myContact myFeedback");
+    $$("#"+id).addClass(classToAdd).removeClass(classToRemove);
+    $$("#"+id).find(".innerText").text(textToShow);
 }

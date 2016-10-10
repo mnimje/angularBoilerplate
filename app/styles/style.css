@@ -32,6 +32,11 @@ html {
   user-select: none;          /* Likely future */  
 -webkit-transition: all 500ms;  
 }
+
+.myContainer{
+    height: 100%;
+}
+
 .commonPos {
     position: relative;
     opacity: 0.9;
@@ -57,7 +62,7 @@ html {
     display: block;
     left: 0;
     top: 70%;
-    width: 0%;
+    width: 30%;
     text-align: left;
 	margin-left:5px;
     color: #000;
@@ -223,7 +228,7 @@ a{
 }
 .headerNavBar {
     /* margin: auto; */
-    width: 55px;
+    width: 85px;
     /* height: 35px; */
     background: white;
     padding: 10px;

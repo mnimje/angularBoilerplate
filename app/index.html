@@ -14,6 +14,8 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="bower_components\bootstrap\dist\css/bootstrap.css">
         <link rel="stylesheet" href="styles/main.css">
+        <link href="https://fonts.googleapis.com/css?family=David+Libre" rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css"  />  
         <!-- endbuild -->
 </head>
   <body>
@@ -28,7 +30,7 @@
 
     <!-- Add your site or application content here -->
 
-    <div ui-view=""></div>
+    <div ui-view="" class="myContainer"></div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -61,5 +63,12 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers\main.js"></script>
         <!-- endbuild -->
+
+        <script src="scripts/jquery.js"></script>
+        <script>
+          var $$ = $.noConflict(true);          
+        </script>
+        <script src="scripts/anim.js"></script>
+        <script src="scripts/script.js"></script>        
 </body>
 </html>
